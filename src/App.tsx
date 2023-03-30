@@ -5,6 +5,7 @@ import Checkbox from "./components/checkbox";
 import Form from "./components/form";
 import Pagination from "./components/pagination";
 import Tags from "./components/tags";
+import Modal from "./components/modal";
 import "./styles/styles.scss";
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
       <Form />
       <Pagination />
       <Tags />
+      <Modal />
     </div>
   );
 };

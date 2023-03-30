@@ -1,0 +1,47 @@
+.modal {
+    width: 20rem;
+    border: 2px solid black;
+
+    &__header {
+        background-color: $header-background;
+        display: flex;
+        justify-content: center;
+
+        &__img {
+            width: 3rem;
+        }
+    }
+
+    &__content {
+
+        &__title {
+            font-size: 3rem;
+        }
+
+        &__num {
+            font-size: 1.5rem;
+            align-self: center;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: space-evenly;
+
+        &__accept {
+            background-color: green;
+            border: none;
+            border-radius: 1rem;
+            font-size: 1.5rem;
+            padding: 0.5rem 1rem;
+        }
+
+        &__decline {
+            background-color: red;
+            border: none;
+            border-radius: 1rem;
+            font-size: 1.5rem;
+            padding: 0.5rem 1rem;
+        }
+    }
+}
