@@ -1,7 +1,23 @@
-.button {
+.btn-container {
+  margin-left: 2rem;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+
+  &__btn {
     background-color: $header-background;
     border: 0.2rem solid gray;
     border-radius: 10px;
     padding: 0.5rem 1rem;
     font-size: 1.5rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: black;
+      color: $header-background;
+      transition: 0.5s;
+    }
+  }
 }
