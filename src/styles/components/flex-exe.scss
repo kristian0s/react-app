@@ -1,0 +1,28 @@
+.flex {
+  display: flex;
+  justify-content: space-between;
+  border: 0.5rem solid black;
+
+  &__icon {
+    width: 3rem;
+  }
+
+  &__left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &--second {
+    justify-content: flex-end;
+  }
+
+  &__img {
+    width: 3rem;
+  }
+
+  &--third {
+    justify-content: center;
+    align-items: center;
+  }
+}
