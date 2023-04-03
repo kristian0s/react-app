@@ -1,8 +1,16 @@
-.checkbox-container {
-  margin-left: 2rem;
-  font-size: 2rem;
+.wrapper {
+  margin: $container-margin-tl;
 
-  &__lbl {
-    margin-right: 2rem;
+  &__title {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+
+  &__checkbox-container {
+    font-size: 2rem;
+
+    &__lbl {
+      margin-right: 2rem;
+    }
   }
 }
