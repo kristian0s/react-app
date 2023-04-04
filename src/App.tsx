@@ -15,15 +15,40 @@ const App = () => {
     <div className="App">
       <Header />
       <Navigation />
-      <div className="container">Hello world!</div>
-      <Button />
-      <Checkbox />
-      <Form />
-      <Pagination />
-      <Tags />
-      <Modal />
-      <TransformExe />
-      <FlexExe />
+      <div className="container">
+        <div className="container--component">
+          <h2>Button</h2>
+          <Button />
+        </div>
+        <div className="container--component">
+          <h2>Checkbox</h2>
+          <Checkbox />
+        </div>
+        <div className="container--component">
+          <h2>Form</h2>
+          <Form />
+        </div>
+        <div className="container--component">
+          <h2>Pagination</h2>
+          <Pagination />
+        </div>
+        <div className="container--component">
+          <h2>Tags</h2>
+          <Tags />
+        </div>
+        <div className="container--component">
+          <h2>Modal</h2>
+          <Modal />
+        </div>
+        <div className="container--component">
+          <h2>Transform exercise</h2>
+          <TransformExe />
+        </div>
+        <div className="container--component">
+          <h2>Flex exercise</h2>
+          <FlexExe />
+        </div>
+      </div>
     </div>
   );
 };

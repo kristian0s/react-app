@@ -1,16 +1,5 @@
-.wrapper {
-  margin: $container-margin-tl;
-
-  &__title {
-    margin: 0;
-    margin-bottom: 1rem;
-  }
-
-  &__checkbox-container {
-    font-size: 2rem;
-
-    &__lbl {
-      margin-right: 2rem;
-    }
+.ckbox {
+  &__lbl {
+    margin-right: 2rem;
   }
 }
