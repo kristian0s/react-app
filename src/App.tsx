@@ -9,6 +9,7 @@ import Modal from "./components/modal";
 import "./styles/styles.scss";
 import TransformExe from "./components/transform-exe";
 import FlexExe from "./components/Flex-exe";
+import Input from "./components/input";
 
 const App = () => {
   return (
@@ -17,7 +18,13 @@ const App = () => {
       <Navigation />
       <div className="container">
         <div className="container--component">
+          <h2>Input</h2>
+          <Input validation="hej" />
+          <Input label="Last name" rounded={true} />
+        </div>
+        <div className="container--component">
           <h2>Button</h2>
+          <Button value="Animate me!" animate={true} />
           <Button />
         </div>
         <div className="container--component">
