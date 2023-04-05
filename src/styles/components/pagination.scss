@@ -1,0 +1,23 @@
+.pagination {
+  width: 20rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+
+  &__item {
+    border: 2px solid gray;
+    padding: 0 0.3rem;
+
+    &:hover {
+      background-color: $header-background;
+      transition: all 250ms ease;
+    }
+  }
+
+  &__arrow {
+    &:hover {
+      color: $header-background;
+    }
+  }
+}

@@ -1,47 +1,49 @@
 .modal {
-    width: 20rem;
-    border: 2px solid black;
+  width: 20rem;
+  border: 2px solid black;
+  padding-bottom: 1rem;
 
-    &__header {
-        background-color: $header-background;
-        display: flex;
-        justify-content: center;
+  &__header {
+    background-color: $header-background;
+    display: flex;
+    justify-content: center;
 
-        &__img {
-            width: 3rem;
-        }
+    &__img {
+      width: 3rem;
+    }
+  }
+
+  &__content {
+    &__title {
+      margin: 0;
+      margin: 1rem 0.5rem;
+      font-size: 3rem;
     }
 
-    &__content {
-
-        &__title {
-            font-size: 3rem;
-        }
-
-        &__num {
-            font-size: 1.5rem;
-            align-self: center;
-        }
+    &__num {
+      margin: 1rem 4.5rem;
+      font-size: 1.5rem;
     }
+  }
+
+  &__lower {
+    display: flex;
+    justify-content: space-evenly;
 
     &__btn {
-        display: flex;
-        justify-content: space-evenly;
+      &--accept {
+        background-color: green;
+        color: $header-background;
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+      }
 
-        &__accept {
-            background-color: green;
-            border: none;
-            border-radius: 1rem;
-            font-size: 1.5rem;
-            padding: 0.5rem 1rem;
-        }
-
-        &__decline {
-            background-color: red;
-            border: none;
-            border-radius: 1rem;
-            font-size: 1.5rem;
-            padding: 0.5rem 1rem;
-        }
+      &--decline {
+        background-color: red;
+        color: $header-background;
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+      }
     }
+  }
 }

@@ -1,49 +1,56 @@
 .tags {
-    display: flex;
-    align-items: center;
-}
+  display: flex;
+  align-items: center;
 
-.card-tag {
+  &__card {
     border: none;
     border-radius: 3rem;
     background-color: gray;
     width: 7rem;
     display: flex;
     justify-content: space-evenly;
+    margin-right: 2rem;
     padding: 0.5rem;
-    margin-left: 2rem;
     cursor: pointer;
-    
-    & .card-icon {
-        width: 1.5rem;
+    transition: all 250ms ease;
+
+    &__icon {
+      width: 1.5rem;
     }
 
-    & .card-label {
-        font-size: 1.5rem;
-        cursor: pointer;
+    &__lbl {
+      font-size: 1.5rem;
+      cursor: pointer;
     }
 
     &:hover {
-        background-color: $header-background;
+      background-color: $header-background;
     }
+  }
 
-}
-
-.best-tag {
+  &__best {
     border-left: 0.5rem solid orangered;
     background-color: $header-background;
-    margin-left: 2rem;
-    width: 7rem;
+    cursor: pointer;
+    margin-right: 2rem;
+    transition: all 250ms ease;
 
     &:hover {
-        background-color: goldenrod;
-        color: $header-background;
-        cursor: pointer;
+      background-color: goldenrod;
+      color: $header-background;
     }
 
-    & .best-label {
-        display: block;
-        padding: 0.3rem;
-        font-size: 1.5rem;
+    &__lbl {
+      display: block;
+      border: 0;
+      margin: 0;
+      padding: 0.3rem;
+      font-size: 1.5rem;
+
+      &:hover {
+        background-color: goldenrod;
+        color: $header-background;
+      }
     }
+  }
 }
