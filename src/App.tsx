@@ -19,7 +19,7 @@ const App = () => {
       <div className="container">
         <div className="container--component">
           <h2>Input</h2>
-          <Input validation="hej" />
+          <Input validation="g" />
           <Input label="Last name" rounded={true} />
         </div>
         <div className="container--component">
