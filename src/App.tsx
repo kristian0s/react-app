@@ -19,8 +19,12 @@ const App = () => {
       <div className="container">
         <div className="container--component">
           <h2>Input</h2>
-          <Input validation="hej" />
-          <Input label="Last name" rounded={true} />
+          <Input label="" />
+          <Input
+            label="Last name"
+            rounded={true}
+            validation="Ovo je validacija"
+          />
         </div>
         <div className="container--component">
           <h2>Button</h2>

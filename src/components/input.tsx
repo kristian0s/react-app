@@ -13,7 +13,7 @@ const Input = ({ rounded, label, validation }: InputProps) => {
         className={`input ${rounded ? "input--rounded" : ""}`}
         type="text"
       />
-      {validation ? <p className="validation-success">Success!</p> : ""}
+      {validation ? <p>{validation}</p> : ""}
     </>
   );
 };
