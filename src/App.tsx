@@ -10,6 +10,7 @@ import "./styles/styles.scss";
 import TransformExe from "./components/transform-exe";
 import FlexExe from "./components/Flex-exe";
 import Input from "./components/input";
+import Card from "./components/card";
 
 const App = () => {
   return (
@@ -58,6 +59,13 @@ const App = () => {
         <div className="container--component">
           <h2>Flex exercise</h2>
           <FlexExe />
+        </div>
+        <h2>Grid</h2>
+        <div className="grid">
+          <Card title="Title" />
+          <Card title="Titl" />
+          <Card title="Tit" />
+          <Card title="Titlee" />
         </div>
       </div>
     </div>

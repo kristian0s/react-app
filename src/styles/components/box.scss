@@ -1,40 +1,46 @@
 .box {
-        width: 10rem;
-        height: 10rem;
-        background-color: $green;
-        border-radius: 0.5rem;
-        cursor: pointer;
-        transition: all 250ms ease;
+  width: 10rem;
+  height: 10rem;
+  background-color: $green;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 250ms ease;
 
-        &__wrapper {
-            display: flex;
-            justify-content: space-between;
-        }
-    
-        &--translate {
-            &:hover {
-                transform: translate3d(50px, 0, 0);
-            }
-        }
-    
-        &--rotate {
-            &:hover {
-                transform: rotate(180deg);
-            }
-        }
-    
-        &--scale {
-            &:hover {
-                transform: scale(1.2);
-            }
-            &:active {
-                transform: scale(0.8);
-            }
-        }
-    
-        &--skew {
-            &:hover {
-                transform: skew(30deg);
-            }
-        }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $media-lg) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
     }
+  }
+
+  &--translate {
+    &:hover {
+      transform: translate3d(50px, 0, 0);
+    }
+  }
+
+  &--rotate {
+    &:hover {
+      transform: rotate(180deg);
+    }
+  }
+
+  &--scale {
+    &:hover {
+      transform: scale(1.2);
+    }
+    &:active {
+      transform: scale(0.8);
+    }
+  }
+
+  &--skew {
+    &:hover {
+      transform: skew(30deg);
+    }
+  }
+}
