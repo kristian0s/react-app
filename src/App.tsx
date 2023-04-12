@@ -11,6 +11,7 @@ import TransformExe from "./components/transform-exe";
 import FlexExe from "./components/Flex-exe";
 import Input from "./components/input";
 import Card from "./components/card";
+import Pl_cards from "./components/card-pl";
 
 const App = () => {
   return (
@@ -62,10 +63,17 @@ const App = () => {
         </div>
         <h2>Grid</h2>
         <div className="grid">
-          <Card title="Title" />
-          <Card title="Titl" />
-          <Card title="Tit" />
-          <Card title="Titlee" />
+          <Card title="Title 1" />
+          <Card title="Title 2" />
+          <Card title="Title 3" />
+          <Card title="Title 4" />
+        </div>
+        <h2>Grid 2</h2>
+        <div className="grid">
+          <Pl_cards />
+          <Pl_cards />
+          <Pl_cards />
+          <Pl_cards />
         </div>
       </div>
     </div>
