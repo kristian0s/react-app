@@ -1,35 +1,19 @@
-import Header from "./components/header";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "./styles/styles.scss";
-import Home from "./pages/home";
-import Ispit from "./pages/ispit";
-import Exe from "./pages/Exe";
-import Mlinar from "./pages/mlinar";
+import { Form } from "react-router-dom";
+import Button from "../components/button";
+import Card from "../components/card";
+import Pl_cards from "../components/card-pl";
+import Checkbox from "../components/checkbox";
+import FlexExe from "../components/Flex-exe";
+import Input from "../components/input";
+import Modal from "../components/modal";
+import Navigation from "../components/navigation";
+import Pagination from "../components/pagination";
+import Tags from "../components/tags";
+import TransformExe from "../components/transform-exe";
 
-const App = () => {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Home />,
-    },
-    {
-      path: "/ispit",
-      element: <Ispit />,
-    },
-    {
-      path: "/exe",
-      element: <Exe />,
-    },
-    {
-      path: "/mlinar",
-      element: <Mlinar />,
-    },
-  ]);
-
+const Exe = () => {
   return (
-    <div className="App">
-      <Header />
-      <RouterProvider router={router} />
+    <div className="container">
       <Navigation />
       <div className="container">
         <div className="container--component">
@@ -44,6 +28,7 @@ const App = () => {
         <div className="container--component">
           <h2>Button</h2>
           <Button value="Animate me!" animate={true} />
+          <Button />
         </div>
         <div className="container--component">
           <h2>Checkbox</h2>
@@ -66,14 +51,14 @@ const App = () => {
           <Modal />
         </div>
         <div className="container--component">
-          <h2>Transform property exercise</h2>
+          <h2>Transform exercise</h2>
           <TransformExe />
         </div>
         <div className="container--component">
           <h2>Flex exercise</h2>
           <FlexExe />
         </div>
-        <h2>Responsive grid</h2>
+        <h2>Grid</h2>
         <div className="grid">
           <Card title="Title 1" />
           <Card title="Title 2" />
@@ -92,4 +77,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Exe;
