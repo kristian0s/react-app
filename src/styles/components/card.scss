@@ -1,27 +1,107 @@
 .card {
   background-color: $header-background;
-  border: 2px solid gray;
-  border-radius: 2rem;
+  border-radius: 1rem;
   padding: 1rem;
 
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+
+    @media (min-width: $media-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $media-lg) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
   &__img {
-    margin: 1rem 1.5rem;
-    width: 100%;
+    img {
+      width: 100%;
+      display: block;
+      height: 15rem;
+      object-fit: cover;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+    }
+    &--secondary {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 4rem;
+      object-fit: cover;
+      margin-right: 1rem;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    &--secondary {
+      font-size: 1.25rem;
+      margin-bottom: 0.25rem;
+    }
   }
 
   &__footer {
-    display: flex;
-    justify-content: space-evenly;
-  }
-}
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+    margin-top: 2rem;
+    &--secondary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 0.5rem;
+      margin-top: 2rem;
+    }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  @media (min-width: $media-md) {
-    grid-template-columns: repeat(2, 1fr);
+    &__label {
+      font-size: 0.72rem;
+      color: $gray-dark;
+      margin-bottom: 0.5rem;
+    }
+
+    &__value {
+      font-weight: 600;
+    }
   }
-  @media (min-width: $media-lg) {
-    grid-template-columns: repeat(4, 1fr);
+
+  &__header {
+    display: flex;
+    align-items: center;
+  }
+
+  &__body {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $gray-dark;
+    padding-bottom: 2rem;
+
+    &__title {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &__desc {
+      font-size: 0.75rem;
+      color: $gray-dark;
+    }
+  }
+
+  &__tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: $white;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 4rem;
+    background-color: $blue;
+    padding-bottom: 0.25rem;
   }
 }

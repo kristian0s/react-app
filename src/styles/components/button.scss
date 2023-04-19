@@ -64,4 +64,17 @@
       animation: squeeze 3s linear forwards;
     }
   }
+
+  //colors
+  &--red {
+    background-color: $red;
+  }
+
+  &--green {
+    background-color: $green;
+  }
+
+  &--yellow {
+    background-color: $yellow;
+  }
 }

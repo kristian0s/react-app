@@ -9,11 +9,10 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 
-    @media (min-width: $media-lg) {
-      display: flex;
+    @media (min-width: $media-md) {
       flex-direction: row;
-      justify-content: space-between;
     }
   }
 
@@ -25,7 +24,7 @@
 
   &--rotate {
     &:hover {
-      transform: rotate(180deg);
+      transform: rotate3d(0, 0, 1, 180deg);
     }
   }
 
@@ -40,7 +39,7 @@
 
   &--skew {
     &:hover {
-      transform: skew(30deg);
+      transform: skew(25deg, 25deg);
     }
   }
 }

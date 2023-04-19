@@ -31,7 +31,6 @@ const App = () => {
         <div className="container--component">
           <h2>Button</h2>
           <Button value="Animate me!" animate={true} />
-          <Button />
         </div>
         <div className="container--component">
           <h2>Checkbox</h2>
@@ -54,14 +53,14 @@ const App = () => {
           <Modal />
         </div>
         <div className="container--component">
-          <h2>Transform exercise</h2>
+          <h2>Transform property exercise</h2>
           <TransformExe />
         </div>
         <div className="container--component">
           <h2>Flex exercise</h2>
           <FlexExe />
         </div>
-        <h2>Grid</h2>
+        <h2>Responsive grid</h2>
         <div className="grid">
           <Card title="Title 1" />
           <Card title="Title 2" />

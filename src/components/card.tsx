@@ -1,10 +1,10 @@
 import Button from "./button";
 
-type TitleProps = {
+type CardProps = {
   title: string;
 };
 
-const Card = ({ title }: TitleProps) => {
+const Card = ({ title }: CardProps) => {
   return (
     <div className="card">
       <div className="card__img">
@@ -13,11 +13,11 @@ const Card = ({ title }: TitleProps) => {
           alt="random image"
         />
       </div>
-      {title ? <h2>{title}</h2> : ""}
-      <p className="card__desc">
+      <div className="card__title">{title}</div>
+      <div className="card__description">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+      </div>
       <div className="card__footer">
         <Button value="OK" color="green" />
         <Button value="Cancel" />
