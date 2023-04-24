@@ -7,6 +7,7 @@ import Mlinar from "./pages/mlinar";
 
 import "./styles/styles.scss";
 import Varijable from "./pages/varijable";
+import Petlje from "./pages/petlje";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -29,6 +30,10 @@ const App = () => {
     {
       path: "/varijable",
       element: <Varijable />,
+    },
+    {
+      path: "/petlje",
+      element: <Petlje />,
     },
   ]);
 
