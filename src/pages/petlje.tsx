@@ -40,20 +40,21 @@ const Petlje = () => {
 
     //4. Brojevi do zadanog ispisani u stringu
 
-    for (var len = inputValue, i = 0; i < len; i++) {
-      console.log(grid[i] + 5);
+    let num = [];
+    for (let i = 0; i < inputValue; i++) {
+      num.push({ num += i });
     }
-  };
-  return (
-    <div className="container">
-      <h1>Petlje</h1>
-      <hr />
-      <div>
-        <input className="input" type="number" />
-        <button onClick={() => handleValue()}>Submit</button>
+    return (
+      <div className="container">
+        <h1>Petlje</h1>
+        <hr />
+        <div>
+          <input className="input" type="number" />
+          <button onClick={() => handleValue()}>Submit</button>
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 };
 
 export default Petlje;
