@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Header from "./components/header";
 import Home from "./pages/home";
 import Ispit from "./pages/ispit";
-import Exe from "./pages/Exe";
+import Exe from "./pages/exe";
 import Mlinar from "./pages/mlinar";
 
 import "./styles/styles.scss";
