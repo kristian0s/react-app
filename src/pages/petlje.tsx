@@ -40,21 +40,23 @@ const Petlje = () => {
 
     //4. Brojevi do zadanog ispisani u stringu
 
-    let num = [];
+    let x = [];
     for (let i = 0; i < inputValue; i++) {
-      num.push({ num += i });
+      x.push(i + ",");
     }
-    return (
-      <div className="container">
-        <h1>Petlje</h1>
-        <hr />
-        <div>
-          <input className="input" type="number" />
-          <button onClick={() => handleValue()}>Submit</button>
-        </div>
-      </div>
-    );
+    console.log(x);
   };
+
+  return (
+    <div className="container">
+      <h1>Petlje</h1>
+      <hr />
+      <div>
+        <input className="input" type="number" />
+        <button onClick={() => handleValue()}>Submit</button>
+      </div>
+    </div>
+  );
 };
 
 export default Petlje;
