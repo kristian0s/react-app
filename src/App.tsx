@@ -2,12 +2,13 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Header from "./components/header";
 import Home from "./pages/home";
 import Ispit from "./pages/ispit";
-import Exe from "./pages/exe";
+import Exe from "./pages/Exe";
 import Mlinar from "./pages/mlinar";
 
 import "./styles/styles.scss";
 import Varijable from "./pages/varijable";
 import Petlje from "./pages/petlje";
+import Vjezba2604 from "./pages/vjezba2604";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -34,6 +35,10 @@ const App = () => {
     {
       path: "/petlje",
       element: <Petlje />,
+    },
+    {
+      path: "/vjezba2604",
+      element: <Vjezba2604 />,
     },
   ]);
 
