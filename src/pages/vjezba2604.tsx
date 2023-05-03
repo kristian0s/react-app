@@ -72,8 +72,6 @@ const Vjezba2604 = () => {
   for (let i = 0; i < brojevi.length; i++) {
     if (brojevi[i] > biggestNumber) {
       biggestNumber = brojevi[i];
-    } else {
-      continue;
     }
   }
 
