@@ -194,9 +194,5 @@ const Vjezba2804 = () => {
     </div>
   );
 };
-      <div></div>
-    </div>
-  );
-};
 
 export default Vjezba2804;
