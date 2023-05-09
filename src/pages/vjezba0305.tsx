@@ -39,15 +39,15 @@ const Vjezba0305 = () => {
     setInterval(frame, 200);
   }, []);
 
+  const handleClick = () => {};
+
   return (
     <div className="container">
       <h1>Vjezba0305</h1>
       <hr />
-
-      <hr />
       <h4>3. Zadatak</h4>
       <div className="box"></div>
-      <hr />
+      <button onClick={() => handleClick()}>Click me!</button>
     </div>
   );
 };

@@ -8,7 +8,7 @@ import "./styles/styles.scss";
 import Varijable from "./pages/varijable";
 import Petlje from "./pages/petlje";
 import Vjezba2604 from "./pages/vjezba2604";
-import Exe from "./pages/Exe";
+import Exe from "./pages/exe";
 import Vjezba2804 from "./pages/vjezba2804";
 import Vjezba0305 from "./pages/vjezba0305";
 import Breweries from "./pages/breweries";
