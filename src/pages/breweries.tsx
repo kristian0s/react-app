@@ -59,7 +59,7 @@ const Breweries = () => {
       })
       .then((jsonData) => {
         setDataBySearch(jsonData);
-        console.log("bySearch: ", jsonData);
+        console.log(jsonData);
       })
       .catch((error) => console.error(error));
   };
