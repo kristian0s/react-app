@@ -12,7 +12,7 @@ import Vjezba2804 from "./pages/vjezba2804";
 import Vjezba0305 from "./pages/vjezba0305";
 import Breweries from "./pages/breweries";
 import Pokemoni from "./pages/pokemon";
-import Exe from "./pages/Exe";
+import Exe from "./pages/exe";
 
 const App = () => {
   const router = createBrowserRouter([
