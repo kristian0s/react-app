@@ -1,0 +1,7 @@
+.container {
+  &__chat {
+    border: 1.5rem solid $gray;
+    display: flex;
+    justify-content: space-between;
+  }
+}
