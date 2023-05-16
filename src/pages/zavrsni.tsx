@@ -1,8 +1,8 @@
 const Zavrsni = () => {
   return (
-    <div className="container__chat">
-      <div className="chat__left">hi</div>
-      <div className="chat__rigt">hej</div>
+    <div className="containe__chat">
+      <div className="chat__screen"></div>
+      <div className="chat__input"></div>
     </div>
   );
 };

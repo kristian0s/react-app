@@ -68,15 +68,16 @@ const Vjezba1505 = () => {
   //9. Funkcija kreira fibonacciev niz ispravi pogresku:
   const fibonacciSequence = (n: number) => {
     const sequence = [1, 1];
+    debugger;
     if (n <= 0) {
       return [];
     } else if (n === 1) {
       return [1];
     } else if (n === 2) {
-      return [1, 1];
+      return sequence;
     } else {
-      for (let i = 3; i <= n; i++) {
-        sequence.push(sequence[i] + sequence[i - 1]);
+      for (let i = 2; i <= n; i++) {
+        sequence.push(sequence[i - 1] + sequence[i - 2]);
       }
       return sequence;
     }
@@ -93,7 +94,7 @@ const Vjezba1505 = () => {
 
   useEffect(() => {
     //Ovdje možemo pokretati funkciju koju testiramo
-    console.log("rjesenje je: ", filterEvenNumbers([1, 2, 3, 4, 5, 6, 7]));
+    console.log("rjesenje je: ", fibonacciSequence(4));
   }, []);
   return <div className="container"></div>;
 };

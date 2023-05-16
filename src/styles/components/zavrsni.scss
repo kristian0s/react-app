@@ -1,7 +1,9 @@
 .container {
-  &__chat {
-    border: 1.5rem solid $gray;
-    display: flex;
-    justify-content: space-between;
+  & .chat {
+    background-color: $gray;
+    border: 1rem solid black;
+    margin: auto;
+    height: 40rem;
+    width: 50rem;
   }
 }
