@@ -17,6 +17,7 @@ import Europe from "./pages/europe";
 import Africa from "./pages/africa";
 import Vjezba1505 from "./pages/vjezba1505";
 import Zavrsni from "./pages/zavrsni";
+import Todo from "./pages/todo";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -79,6 +80,10 @@ const App = () => {
     {
       path: "/zavrsni",
       element: <Zavrsni />,
+    },
+    {
+      path: "/todo",
+      element: <Todo />,
     },
   ]);
 

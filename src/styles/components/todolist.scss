@@ -1,0 +1,30 @@
+.cont {
+  border: 1rem solid black;
+  background-color: $gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    font-size: 5rem;
+    color: goldenrod;
+  }
+
+  &__input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__field {
+    height: 2.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__items {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
