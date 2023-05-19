@@ -18,6 +18,7 @@ import Africa from "./pages/africa";
 import Vjezba1505 from "./pages/vjezba1505";
 import Zavrsni from "./pages/zavrsni";
 import Todo from "./pages/todo";
+import Parcijalni1905 from "./pages/parcijalni1905";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -84,6 +85,10 @@ const App = () => {
     {
       path: "/todo",
       element: <Todo />,
+    },
+    {
+      path: "/parcijalni1905",
+      element: <Parcijalni1905 />,
     },
   ]);
 
