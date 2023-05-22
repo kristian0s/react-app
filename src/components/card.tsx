@@ -20,6 +20,7 @@ const Card = ({ title }: CardProps) => {
       </div>
       <div>HeeeHee</div>
       <div>HH</div>
+      <div>asddgh</div>
       <div className="card__footer">
         <Button value="OK" color="green" />
         <Button value="Cancel" />
