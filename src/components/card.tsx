@@ -15,10 +15,9 @@ const Card = ({ title }: CardProps) => {
       </div>
       <div className="card__title">{title}</div>
       <div className="card__description">
-        LoreM ipsuM dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
       </div>
-      <div>new Div</div>
       <div className="card__footer">
         <Button value="OK" color="green" />
         <Button value="Cancel" />

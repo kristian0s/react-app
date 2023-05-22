@@ -11,7 +11,7 @@ const Header = () => {
         <div className="header__actions">
           <nav className="header__nav">
             <a className="header__nav__item" href="/">
-              Homeeeeeee
+              Home
             </a>
             <a className="header__nav__item" href="/ispit">
               CSS Ispit
