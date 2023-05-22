@@ -18,7 +18,7 @@ const Card = ({ title }: CardProps) => {
         LoreM ipsuM dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
       </div>
-      <div>Heee</div>
+      <div>HeeeHee</div>
       <div>HH</div>
       <div className="card__footer">
         <Button value="OK" color="green" />
