@@ -11,7 +11,7 @@ import Vjezba2604 from "./pages/vjezba2604";
 import Vjezba2804 from "./pages/vjezba2804";
 import Vjezba0305 from "./pages/vjezba0305";
 import Breweries from "./pages/breweries";
-import Pokemoni from "./pages/pokemon";
+import Pokemon from "./pages/pokemon";
 import Exe from "./pages/exe";
 import Europe from "./pages/europe";
 import Africa from "./pages/africa";
@@ -64,7 +64,7 @@ const App = () => {
     },
     {
       path: "/pokemon",
-      element: <Pokemoni />,
+      element: <Pokemon />,
     },
     {
       path: "/europe",

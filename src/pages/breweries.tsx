@@ -7,28 +7,14 @@ type BreweryType = {
   country: string;
 };
 
-// 1.nacin
-//   async function getBreweries() {
-//     const response = await fetch(
-//       "https://api.openbrewerydb.org/v1/breweries?by_city=london"
-//     );
-//     const jsonData = await response.json();
-//     console.log(jsonData);
-//     setData(jsonData);
-//   }
-
-//   useEffect(() => {
-//     getBreweries();
-//   }, []);
-
 const Breweries = () => {
   const [data, setData] = useState<BreweryType[]>([]);
   const [dataByCity, setDataByCity] = useState<BreweryType[]>([]);
-  const [dataBySearch, setDataBySearch] = useState<BreweryType[]>([]);
-  const [search, setSearch] = useState<string>("");
+  const [searchData, setSearchData] = useState<BreweryType[]>([]);
+  const [searchValue, setSearchValue] = useState<string>("");
 
   const getBreweries = () => {
-    fetch(`https://api.openbrewerydb.org/v1/breweries/}`)
+    fetch("https://api.openbrewerydb.org/v1/breweries")
       .then((response) => {
         return response.json();
       })
@@ -38,35 +24,35 @@ const Breweries = () => {
       .catch((error) => console.error(error));
   };
 
-  const getBreweryByCity = (city: string, perPage: number) => {
+  const getBreweryByCity = (city: string) => {
     fetch(
-      `https://api.openbrewerydb.org/v1/breweries?by_city=${city}&per_page=${perPage}`
+      `https://api.openbrewerydb.org/v1/breweries?by_city=${city}&per_page=10&page=4`
     )
       .then((response) => {
         return response.json();
       })
       .then((jsonData) => {
         setDataByCity(jsonData);
-        console.log("byCity: ", jsonData);
       })
       .catch((error) => console.error(error));
   };
 
-  const getBreweriesBySearch = (search: string) => {
-    fetch(`https://api.openbrewerydb.org/v1/breweries/search?query=${search}`)
+  const handleSearch = (searchValue: string) => {
+    fetch(
+      `https://api.openbrewerydb.org/v1/breweries/search?query=${searchValue}`
+    )
       .then((response) => {
         return response.json();
       })
       .then((jsonData) => {
-        setDataBySearch(jsonData);
-        console.log(jsonData);
+        setSearchData(jsonData);
       })
       .catch((error) => console.error(error));
   };
 
   useEffect(() => {
     getBreweries();
-    getBreweryByCity("san_diego", 5);
+    getBreweryByCity("san_diego");
   }, []);
 
   return (
@@ -75,7 +61,11 @@ const Breweries = () => {
       <div>
         {data.length > 0 ? (
           data.map((brewery: BreweryType) => {
-            return <div key={brewery.id}>{brewery.name}</div>;
+            return (
+              <div key={brewery.id}>
+                {brewery.name}, {brewery.city}
+              </div>
+            );
           })
         ) : (
           <div>Nema niti jedna pivovara za zadani parametar</div>
@@ -87,23 +77,23 @@ const Breweries = () => {
           return <div key={brewery.id}>{brewery.name}</div>;
         })}
       </div>
-      <h1>By Search</h1>
+      <h1>Search</h1>
       <div>
         <input
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
+          value={searchValue}
+          onChange={(e) => setSearchValue(e.target.value)}
           type="text"
         />
-        <button onClick={() => getBreweriesBySearch(search)}>Search</button>
+        <button onClick={() => handleSearch(searchValue)}>Search</button>
       </div>
       <div>
-        {dataBySearch.length > 0 ? (
-          dataBySearch.map((brewery: BreweryType) => {
+        {searchData.length > 0 ? (
+          searchData.map((brewery: BreweryType) => {
             return <div key={brewery.id}>{brewery.name}</div>;
           })
         ) : (
           <div>
-            Nisam pronašao niti jednu pivovaru s imenom: {search}, probaj
+            Nisam pronašao niti jednu pivovaru s imenom: {searchValue}, probaj
             upisati neku poznatiju
           </div>
         )}

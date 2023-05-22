@@ -1,52 +1,60 @@
 import { useEffect, useState } from "react";
 
-type CountryType = {
-  name: CountryNameType;
-  flags: FlagsType;
-  currencies: CurrenciesType;
-  capital: string[];
-};
-
 type CountryNameType = {
   common: string;
   official: string;
+  currencies: CurrenciesType;
 };
-
-type FlagsType = {
-  png: string;
-  svg: string;
-};
-
 type CurrenciesType = {
   [currency: string]: {
     name: string;
     symbol: string;
   };
 };
+type FlagsType = {
+  png: string;
+  svg: string;
+};
+type MapType = {
+  googleMaps: string;
+};
+type CarType = {
+  signs: string[];
+  side: "right" | "left";
+};
+export type CountryType = {
+  name: CountryNameType;
+  flags: FlagsType;
+  currencies: CurrenciesType;
+  capital: string[];
+  area: number;
+  maps: MapType;
+  population: number;
+  borders: string[];
+  car: CarType;
+};
 
 const Europe = () => {
-  const [countryData, setCountryData] = useState<CountryType[]>([]);
+  const [europeData, setEuropeData] = useState<CountryType[]>([]);
 
-  const getEuropeCountries = () => {
-    fetch(`https://restcountries.com/v3.1/region/europe`)
-      .then((response) => {
-        return response.json();
-      })
+  const getEuropeData = () => {
+    fetch("https://restcountries.com/v3.1/region/europe")
+      .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        setCountryData(data);
+        setEuropeData(data);
       })
       .catch((err) => console.log(err));
   };
 
   useEffect(() => {
-    getEuropeCountries();
+    getEuropeData();
   }, []);
 
   return (
     <div className="container">
       <h1>Europe</h1>
-      <table>
+      <table className="table">
         <thead>
           <tr>
             <th>Name</th>
@@ -56,24 +64,32 @@ const Europe = () => {
           </tr>
         </thead>
         <tbody>
-          {countryData.map((countries) => {
+          {europeData.map((country: CountryType) => {
             return (
-              <tr>
-                <td>{countries.name.official}</td>
+              <tr key={country.area}>
                 <td>
-                  <img src={countries.flags.png} alt="country flag" />
+                  <a href={`/europe/${country.capital[0].toLocaleLowerCase()}`}>
+                    {country.name.official}
+                  </a>
                 </td>
                 <td>
-                  {Object.keys(countries.currencies).map((currency) => {
+                  <img
+                    src={country.flags.png}
+                    className="table__flag"
+                    alt={`${country.name.official} flag`}
+                  />
+                </td>
+                <td>
+                  {Object.keys(country.currencies).map((key) => {
                     return (
-                      <div>
-                        {countries.currencies[currency].name},{" "}
-                        {countries.currencies[currency].symbol}
-                      </div>
+                      <React.Fragment key={key}>
+                        <span>{country.currencies[key].name}</span>,{" "}
+                        <span>{country.currencies[key].symbol}</span>
+                      </React.Fragment>
                     );
                   })}
                 </td>
-                <td>{countries.capital}</td>
+                <td>{country.capital.map((capital) => capital)}</td>
               </tr>
             );
           })}
