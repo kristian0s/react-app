@@ -15,7 +15,7 @@ const Card = ({ title }: CardProps) => {
       </div>
       <div className="card__title">{title}</div>
       <div className="card__description">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        LoreM ipsuM dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
       </div>
       <div>new Div</div>
