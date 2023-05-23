@@ -11,7 +11,7 @@ const Form = () => {
           <input className="formfield--txt" type="email" />
         </li>
         <li>
-          <label className="formfiel__lbl">Message:</label>
+          <label className="formfield__lbl">Message:</label>
           <textarea className="formfield--area"></textarea>
         </li>
       </ul>

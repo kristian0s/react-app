@@ -18,6 +18,33 @@ const Home = () => {
         <li>
           <a href="/vjezba2604">Vjezba2604</a>
         </li>
+        <li>
+          <a href="/vjezba2604">Vjezba2604</a>
+        </li>
+        <li>
+          <a href="/vjezba2804">Vjezba2804</a>
+        </li>
+        <li>
+          <a href="/vjezba0305">Vjezba0305</a>
+        </li>
+        <li>
+          <a href="/breweries">Pivovare</a>
+        </li>
+        <li>
+          <a href="/pokemon">Pokemon</a>
+        </li>
+        <li>
+          <a href="/europe">Europa</a>
+        </li>
+        <li>
+          <a href="/africa">Afrika</a>
+        </li>
+        <li>
+          <a href="/vjezba1505">Vjezba1505</a>
+        </li>
+        <li>
+          <a href="/todolist">Todo list</a>
+        </li>
       </ul>
     </div>
   );

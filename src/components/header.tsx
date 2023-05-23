@@ -16,35 +16,8 @@ const Header = () => {
             <a className="header__nav__item" href="/ispit">
               CSS Ispit
             </a>
-            <a className="header__nav__item" href="/vjezba2604">
-              Vjezba2604
-            </a>
-            <a className="header__nav__item" href="/vjezba2804">
-              Vjezba2804
-            </a>
-            <a className="header__nav__item" href="/vjezba0305">
-              Vjezba0305
-            </a>
-            <a className="header__nav__item" href="/breweries">
-              Pivovare
-            </a>
-            <a className="header__nav__item" href="/pokemon">
-              Pokemoni
-            </a>
-            <a className="header__nav__item" href="/europe">
-              Europe
-            </a>
-            <a className="header__nav__item" href="/africa">
-              Africa
-            </a>
-            <a className="header__nav__item" href="/vjezba1505">
-              Vjezba1505
-            </a>
             <a className="header__nav__item" href="/zavrsni">
               Zavrsni
-            </a>
-            <a className="header__nav__item" href="/todolist">
-              Todo list
             </a>
             <a className="header__nav__item" href="/parcijalni1905">
               Parcijalni 1905
