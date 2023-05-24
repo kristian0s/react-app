@@ -19,6 +19,7 @@ import Vjezba1505 from "./pages/vjezba1505";
 import Zavrsni from "./pages/zavrsni";
 import Todo from "./pages/todo";
 import Parcijalni1905 from "./pages/parcijalni1905";
+import Netflix from "./pages/netflix";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -89,6 +90,10 @@ const App = () => {
     {
       path: "/parcijalni1905",
       element: <Parcijalni1905 />,
+    },
+    {
+      path: "/netflix",
+      element: <Netflix />,
     },
   ]);
 
