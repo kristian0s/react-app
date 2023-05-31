@@ -45,6 +45,9 @@ const Home = () => {
         <li>
           <a href="/todolist">Todo list</a>
         </li>
+        <li>
+          <a href="/bootstrap">Bootstrap</a>
+        </li>
       </ul>
     </div>
   );

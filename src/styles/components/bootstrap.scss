@@ -1,0 +1,28 @@
+@keyframes falling {
+  0% {
+    transform: translate3d(0, -30rem, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.bootstrapContainer {
+  display: flex;
+  justify-content: space-between;
+
+  &__lbl {
+    font-size: 3rem;
+  }
+
+  &__fallingLbl {
+    transform: translate3d(0, -30rem, 0);
+    animation: falling 1.5s ease-out forwards;
+  }
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+}

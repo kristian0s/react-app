@@ -20,6 +20,7 @@ import Zavrsni from "./pages/zavrsni";
 import Todo from "./pages/todo";
 import Parcijalni1905 from "./pages/parcijalni1905";
 import Netflix from "./pages/netflix";
+import Bootstrap from "./pages/bootstrap";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -94,6 +95,10 @@ const App = () => {
     {
       path: "/netflix",
       element: <Netflix />,
+    },
+    {
+      path: "/bootstrap",
+      element: <Bootstrap />,
     },
   ]);
 
