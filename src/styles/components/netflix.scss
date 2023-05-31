@@ -1,18 +1,94 @@
-.wrap {
-  background-color: black;
-  color: white;
+// .wrap {
+//   background-color: black;
+//   color: white;
+// }
 
-  & .logo {
-    width: 10rem;
+// .head {
+//   display: flex;
+//   justify-content: space-between;
+
+//   &__logo {
+//     width: 10rem;
+//   }
+// }
+// .content {
+//   &__items {
+//     display: flex;
+//     flex-direction: row;
+
+//     &__item {
+//       margin-left: 1.5rem;
+//       margin-right: 1.5rem;
+//     }
+//   }
+
+//   &__txt {
+//     margin-top: 1.5rem;
+//     margin-bottom: 1.5rem;
+//     margin-left: 1rem;
+//   }
+
+//   &__img {
+//     width: 15rem;
+//   }
+
+//   &__title {
+//     width: 15rem;
+//   }
+// }
+
+.netflix {
+  &__grid {
+    background-color: black;
+    color: $white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 2rem;
+    column-gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    cursor: pointer;
+
+    &__item {
+      & img {
+        width: 12rem;
+      }
+      & .title {
+        width: 12rem;
+      }
+    }
   }
 }
-.content {
-  &__items {
+
+.modal {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  height: 80vw;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  &__header {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
   }
 
-  &__img {
-    width: 28rem;
+  &__body {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    &__img {
+      width: 30rem;
+      height: 20rem;
+    }
+  }
+
+  &__container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
 }

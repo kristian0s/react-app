@@ -1,101 +1,74 @@
+import { useState } from "react";
+import { movies, MoviesType } from "../data/moviesData";
+
 const Netflix = () => {
+  const [selectedMovie, setSelectedMovie] = useState<MoviesType | null>(null);
+  const numbers = [1, 2, 3, 5, 16, 22, 37, 40, 48, 50];
+
+  const movieChoice = (id: number) => {
+    const choice = movies.find((item) => item.id === id);
+    choice ? setSelectedMovie(choice) : setSelectedMovie(null);
+  };
+
+  const randomNumber = () => {
+    const randomIndex = Math.floor(Math.random() * numbers.length);
+    return numbers[randomIndex];
+  };
+
   return (
-    <div className="wrap">
-      <div className="head">
-        <img
-          className="wrap logo"
-          src="https://w7.pngwing.com/pngs/723/883/png-transparent-netflix-app-logo-tech-companies-thumbnail.png"
-          alt=""
-        />
+    <div className="container">
+      <h1>Netflix</h1>
+      <hr />
+      <div className="netflix__grid">
+        {movies.map((movie) => {
+          return (
+            <div
+              key={movie.id}
+              className="netflix__grid__item"
+              onClick={() => movieChoice(movie.id)}
+            >
+              <div>
+                <img src={movie.image} alt="" />
+              </div>
+              <div className="netflix__grid__item title">{movie.name}</div>
+            </div>
+          );
+        })}
       </div>
-      <div className="content">
-        <div className="content__txt">Recommended for you: </div>
-        <div className="content__items">
-          <div className="content__items__item">
-            <div>
-              <img
-                className="content__img"
-                src="https://source.unsplash.com/random/?meditation"
-                alt=""
-              />
+      {selectedMovie ? (
+        <>
+          <div
+            className="modal__container"
+            onClick={() => setSelectedMovie(null)}
+          ></div>
+          <div className="modal">
+            <div className="modal__header">
+              <div className="modal__header__title">{selectedMovie.name}</div>
+              <div
+                className="modal__header__close"
+                onClick={() => setSelectedMovie(null)}
+              >
+                X
+              </div>
             </div>
-            <div>The stranger</div>
           </div>
-          <div className="content__items__item">
-            <div>
-              <img
-                className="content__img"
-                src="https://source.unsplash.com/random/?meditation"
-                alt=""
-              />
+          <div className="modal__body">
+            <div className="modal__body__img">
+              <img src={selectedMovie.image} alt="" />
             </div>
-            <div>Heat</div>
-          </div>
-          <div className="content__items__item">
-            <div>
-              <img
-                className="content__img"
-                src="https://source.unsplash.com/random/?meditation"
-                alt=""
-              />
+            <h2>#{randomNumber()} in Croatia today</h2>
+            <div className="modal__body__information">
+              <p>Genres: {selectedMovie.genre}</p>
+              <p>Runtime: {selectedMovie.runtime}</p>
             </div>
-            <div>Prisoners</div>
-          </div>
-          <div className="content__items__item">
-            <div>
-              <img
-                className="content__img"
-                src="https://source.unsplash.com/random/?meditation"
-                alt=""
-              />
+            <div className="modal__body__description">
+              <p>Such a great movie. You will enjoy it. Trust me.</p>
             </div>
-            <div>American Hustle</div>
           </div>
-        </div>
-        <div className="content__txt">Continue watching: </div>
-        <div className="content__items">
-          <div className="content__items__item">
-            <div>
-              <img
-                className="content__img"
-                src="https://source.unsplash.com/random/?meditation"
-                alt=""
-              />
-            </div>
-            <div>Murder Mystery 2</div>
-          </div>
-          <div className="content__items__item">
-            <div>
-              <img
-                className="content__img"
-                src="https://source.unsplash.com/random/?meditation"
-                alt=""
-              />
-            </div>
-            <div>The hatchet wielding hitchhiker</div>
-          </div>
-          <div className="content__items__item">
-            <div>
-              <img
-                className="content__img"
-                src="https://source.unsplash.com/random/?meditation"
-                alt=""
-              />
-            </div>
-            <div>Capturing the killer nurse</div>
-          </div>
-          <div className="content__items__item">
-            <div>
-              <img
-                className="content__img"
-                src="https://source.unsplash.com/random/?meditation"
-                alt=""
-              />
-            </div>
-            <div>The takeover</div>
-          </div>
-        </div>
-      </div>
+        </>
+      ) : (
+        <></>
+      )}
     </div>
   );
 };
