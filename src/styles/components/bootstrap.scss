@@ -22,7 +22,23 @@
   }
 }
 
+.section {
+  display: flex;
+  justify-content: space-around;
+}
+
 .card {
   display: flex;
   justify-content: space-between;
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__span {
+      font-size: 3rem;
+      margin: 0.3rem 3rem;
+    }
+  }
 }
