@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { movies, MoviesType } from "../data/moviesData";
+import NetflixModal from "../components/netflix-modal";
 
 const Netflix = () => {
   const [selectedMovie, setSelectedMovie] = useState<MoviesType | null>(null);
+  const [modalOpen, setModalOpen] = useState(false);
   const numbers = [1, 2, 3, 5, 16, 22, 37, 40, 48, 50];
 
   const movieChoice = (id: number) => {
@@ -13,6 +15,14 @@ const Netflix = () => {
   const randomNumber = () => {
     const randomIndex = Math.floor(Math.random() * numbers.length);
     return numbers[randomIndex];
+  };
+
+  const handleOpenModal = () => {
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
   };
 
   return (
@@ -36,36 +46,7 @@ const Netflix = () => {
         })}
       </div>
       {selectedMovie ? (
-        <>
-          <div
-            className="modal__container"
-            onClick={() => setSelectedMovie(null)}
-          ></div>
-          <div className="modal">
-            <div className="modal__header">
-              <div className="modal__header__title">{selectedMovie.name}</div>
-              <div
-                className="modal__header__close"
-                onClick={() => setSelectedMovie(null)}
-              >
-                X
-              </div>
-            </div>
-          </div>
-          <div className="modal__body">
-            <div className="modal__body__img">
-              <img src={selectedMovie.image} alt="" />
-            </div>
-            <h2>#{randomNumber()} in Croatia today</h2>
-            <div className="modal__body__information">
-              <p>Genres: {selectedMovie.genre}</p>
-              <p>Runtime: {selectedMovie.runtime}</p>
-            </div>
-            <div className="modal__body__description">
-              <p>Such a great movie. You will enjoy it. Trust me.</p>
-            </div>
-          </div>
-        </>
+        <NetflixModal isOpen={modalOpen} onClose={handleCloseModal} />
       ) : (
         <></>
       )}
