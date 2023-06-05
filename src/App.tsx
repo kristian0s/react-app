@@ -21,6 +21,7 @@ import Todo from "./pages/todo";
 import Parcijalni1905 from "./pages/parcijalni1905";
 import Netflix from "./pages/netflix";
 import Bootstrap from "./pages/bootstrap";
+import Instagram from "./pages/instagram/instagram";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -99,6 +100,10 @@ const App = () => {
     {
       path: "/bootstrap",
       element: <Bootstrap />,
+    },
+    {
+      path: "/instagram",
+      element: <Instagram />,
     },
   ]);
 

@@ -48,6 +48,9 @@ const Home = () => {
         <li>
           <a href="/bootstrap">Bootstrap</a>
         </li>
+        <li>
+          <a href="/instagram">Instagram</a>
+        </li>
       </ul>
     </div>
   );
