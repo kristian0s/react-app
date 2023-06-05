@@ -6,6 +6,8 @@ import ProgressBar from "react-bootstrap/ProgressBar";
 import Card from "react-bootstrap/Card";
 import Table from "react-bootstrap/Table";
 import { frontendRazred } from "../data/frontRazred";
+import robot from "../assets/bootstrap/robot.png";
+import coolGuy from "../assets/bootstrap/coolGuy.png";
 import {
   LineChart,
   Line,
@@ -145,16 +147,28 @@ const Bootstrap = () => {
             </Table>
           </Tab>
           <Tab eventKey="profile" title="Game">
-            <div>
-              <div>
-                <div>Player one</div>
-                <div></div>
-                <div></div>
+            <div className="bootstrap__game">
+              <div className="bootstrap__game__title">
+                <input type="text" placeholder="Player one" />
+                <div>
+                  <img
+                    className="bootstrap__game__player"
+                    src={robot}
+                    alt="player one"
+                  />
+                </div>
+                <div className="bootstrap__game__surface"></div>
               </div>
               <div>
                 <div>Player two</div>
-                <div></div>
-                <div></div>
+                <div>
+                  <img
+                    className="bootstrap__game__player"
+                    src={coolGuy}
+                    alt="player two"
+                  />
+                </div>
+                <div className="bootstrap__game__surface"></div>
               </div>
             </div>
           </Tab>
