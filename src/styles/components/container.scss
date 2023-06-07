@@ -8,4 +8,13 @@
     margin-bottom: 2rem;
     padding-bottom: 2rem;
   }
+
+  &--dark {
+    background-color: #121415;
+    color: white;
+  }
+
+  &--small {
+    max-width: 35rem;
+  }
 }
