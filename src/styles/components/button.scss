@@ -49,6 +49,10 @@
     background-color: yellow;
   }
 
+  &--purple {
+    background-color: purple;
+  }
+
   @media (min-width: $media-md) {
     width: unset;
   }

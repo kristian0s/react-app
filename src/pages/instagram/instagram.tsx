@@ -109,7 +109,9 @@ const Instagram = () => {
                       type="text"
                     />
                   </div>
-                  <button className="btn">Post</button>
+                  <button className="modal-instagram__body__button">
+                    Post
+                  </button>
                 </div>
               </div>
             </div>
